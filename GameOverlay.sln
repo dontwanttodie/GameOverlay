@@ -10,19 +10,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameHelper", "GameHelper\Ga
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameOffsets", "GameOffsets\GameOffsets.csproj", "{95B261DD-906E-4634-81D4-0A5A8C1D9398}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreloadAlert", "PreloadAlert\PreloadAlert.csproj", "{112D3DA8-8800-4DAF-9170-B1F0EB8249C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreloadAlert", "Plugins\PreloadAlert\PreloadAlert.csproj", "{112D3DA8-8800-4DAF-9170-B1F0EB8249C7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{95B261DD-906E-4634-81D4-0A5A8C1D9398} = {95B261DD-906E-4634-81D4-0A5A8C1D9398}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Radar", "Radar\Radar.csproj", "{8F659334-9906-4693-B1D3-8ABC188E83A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Radar", "Plugins\Radar\Radar.csproj", "{8F659334-9906-4693-B1D3-8ABC188E83A5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{95B261DD-906E-4634-81D4-0A5A8C1D9398} = {95B261DD-906E-4634-81D4-0A5A8C1D9398}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoHotKeyTrigger", "AutoHotKeyTrigger\AutoHotKeyTrigger.csproj", "{86A443FF-7326-4B21-BC81-20813A7E307E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoHotKeyTrigger", "Plugins\AutoHotKeyTrigger\AutoHotKeyTrigger.csproj", "{86A443FF-7326-4B21-BC81-20813A7E307E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthBars", "HealthBars\HealthBars.csproj", "{113DA4E9-73EB-411C-B328-6440DBB5AB1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthBars", "Plugins\HealthBars\HealthBars.csproj", "{113DA4E9-73EB-411C-B328-6440DBB5AB1C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9199746C-1A0F-4BB9-8351-405FE910A2A0}"
 	ProjectSection(SolutionItems) = preProject
@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Launcher", "Launcher\Launcher.csproj", "{E7010E4F-030C-44B5-8327-7595448258F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{CB17909C-26BB-4461-B028-56166AE26900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	{112D3DA8-8800-4DAF-9170-B1F0EB8249C7} = {CB17909C-26BB-4461-B028-56166AE26900}
+	{8F659334-9906-4693-B1D3-8ABC188E83A5} = {CB17909C-26BB-4461-B028-56166AE26900}
+	{86A443FF-7326-4B21-BC81-20813A7E307E} = {CB17909C-26BB-4461-B028-56166AE26900}
+	{113DA4E9-73EB-411C-B328-6440DBB5AB1C} = {CB17909C-26BB-4461-B028-56166AE26900}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6CB26318-014D-4959-8116-07FD055D941A}

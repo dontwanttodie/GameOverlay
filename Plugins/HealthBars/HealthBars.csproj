@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GameHelper\GameHelper.csproj">
+    <ProjectReference Include="..\..\GameHelper\GameHelper.csproj">
       <Private>false</Private>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
     </ProjectReference>
@@ -40,7 +40,7 @@
                        $(OutDir)$(TargetName).pdb;
                        $(OutDir)spritesheet.png;
                        $(OutDir)spritesheet.json;"
-          DestinationFolder="..\GameHelper\$(OutDir)Plugins\$(ProjectName)"
+          DestinationFolder="..\..\GameHelper\$(OutDir)Plugins\$(ProjectName)"
           SkipUnchangedFiles="true" />
   </Target>
 

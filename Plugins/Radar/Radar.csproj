@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GameHelper\GameHelper.csproj">
+    <ProjectReference Include="..\..\GameHelper\GameHelper.csproj">
       <Private>false</Private>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
     </ProjectReference>
@@ -43,7 +43,7 @@
     <Copy SourceFiles="$(OutDir)$(TargetName)$(TargetExt);
                        $(OutDir)$(TargetName).pdb;
                        $(OutDir)icons.png;"
-          DestinationFolder="..\GameHelper\$(OutDir)Plugins\$(ProjectName)"
+          DestinationFolder="..\..\GameHelper\$(OutDir)Plugins\$(ProjectName)"
           SkipUnchangedFiles="true" />
   </Target>
 

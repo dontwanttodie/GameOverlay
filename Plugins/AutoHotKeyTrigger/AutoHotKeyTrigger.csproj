@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GameHelper\GameHelper.csproj">
+    <ProjectReference Include="..\..\GameHelper\GameHelper.csproj">
       <Private>false</Private>
       <ExcludeAssets>runtime</ExcludeAssets>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
@@ -38,7 +38,7 @@
                        $(OutDir)FlaskNameToBuff.json;
                        $(OutDir)StatusEffectGroup.json;
                        $(OutDir)System.Linq.Dynamic.Core.dll;"
-          DestinationFolder="..\GameHelper\$(OutDir)Plugins\$(ProjectName)"
+          DestinationFolder="..\..\GameHelper\$(OutDir)Plugins\$(ProjectName)"
           SkipUnchangedFiles="true" />
   </Target>
 
