@@ -6,30 +6,30 @@ dotnet_diagnostic.ca2211.severity=none
 # CA1822: Mark members as static
 dotnet_diagnostic.ca1822.severity=none
 
-csharp_prefer_simple_using_statement=true:suggestion
-csharp_prefer_static_local_function=false:suggestion
+csharp_prefer_simple_using_statement= true:suggestion
+csharp_prefer_static_local_function= false:suggestion
 
 # Microsoft .NET properties
 csharp_new_line_before_members_in_object_initializers=false
 csharp_preferred_modifier_order=public, private, protected, internal, new, abstract, virtual, sealed, override, static, readonly, extern, unsafe, volatile, async:suggestion
-csharp_style_var_elsewhere=true:suggestion
-csharp_style_var_for_built_in_types=true:suggestion
-csharp_style_var_when_type_is_apparent=true:suggestion
+csharp_style_var_elsewhere= true:suggestion
+csharp_style_var_for_built_in_types= true:suggestion
+csharp_style_var_when_type_is_apparent= true:suggestion
 dotnet_naming_rule.private_constants_rule.import_to_resharper=as_predefined
-dotnet_naming_rule.private_constants_rule.severity=warning
-dotnet_naming_rule.private_constants_rule.style=upper_camel_case_style
+dotnet_naming_rule.private_constants_rule.severity = warning
+dotnet_naming_rule.private_constants_rule.style = upper_camel_case_style
 dotnet_naming_rule.private_constants_rule.symbols=private_constants_symbols
 dotnet_naming_rule.private_instance_fields_rule.import_to_resharper=as_predefined
-dotnet_naming_rule.private_instance_fields_rule.severity=warning
-dotnet_naming_rule.private_instance_fields_rule.style=lower_camel_case_style
+dotnet_naming_rule.private_instance_fields_rule.severity = warning
+dotnet_naming_rule.private_instance_fields_rule.style = lower_camel_case_style
 dotnet_naming_rule.private_instance_fields_rule.symbols=private_instance_fields_symbols
 dotnet_naming_rule.private_static_fields_rule.import_to_resharper=as_predefined
-dotnet_naming_rule.private_static_fields_rule.severity=warning
-dotnet_naming_rule.private_static_fields_rule.style=lower_camel_case_style
+dotnet_naming_rule.private_static_fields_rule.severity = warning
+dotnet_naming_rule.private_static_fields_rule.style = lower_camel_case_style
 dotnet_naming_rule.private_static_fields_rule.symbols=private_static_fields_symbols
 dotnet_naming_rule.private_static_readonly_rule.import_to_resharper=as_predefined
-dotnet_naming_rule.private_static_readonly_rule.severity=warning
-dotnet_naming_rule.private_static_readonly_rule.style=upper_camel_case_style
+dotnet_naming_rule.private_static_readonly_rule.severity = warning
+dotnet_naming_rule.private_static_readonly_rule.style = upper_camel_case_style
 dotnet_naming_rule.private_static_readonly_rule.symbols=private_static_readonly_symbols
 dotnet_naming_style.lower_camel_case_style.capitalization=camel_case
 dotnet_naming_style.upper_camel_case_style.capitalization=pascal_case
@@ -83,6 +83,23 @@ resharper_suggest_var_or_type_simple_types_highlighting=hint
 resharper_web_config_module_not_resolved_highlighting=warning
 resharper_web_config_type_not_resolved_highlighting=warning
 resharper_web_config_wrong_module_highlighting=warning
+csharp_using_directive_placement = outside_namespace:silent
+csharp_style_expression_bodied_methods = false:silent
+csharp_style_expression_bodied_constructors = false:silent
+csharp_style_expression_bodied_operators = false:silent
+csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_indexers = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+csharp_style_expression_bodied_lambdas = true:silent
+csharp_style_expression_bodied_local_functions = false:silent
+csharp_style_conditional_delegate_call = true:suggestion
+csharp_prefer_braces = true:silent
+csharp_style_namespace_declarations = block_scoped:silent
+csharp_style_prefer_method_group_conversion = true:silent
+csharp_style_prefer_top_level_statements = true:silent
+csharp_space_around_binary_operators = before_and_after
+csharp_indent_labels = one_less_than_current
+insert_final_newline = true
 
 [*.{cs,vb}]
 dotnet_style_object_initializer=false:suggestion
@@ -90,5 +107,12 @@ dotnet_style_collection_initializer=true:suggestion
 
 [*.{appxmanifest,asax,ascx,aspx,axaml,build,cg,cginc,compute,cs,cshtml,dtd,hlsl,hlsli,hlslinc,master,nuspec,paml,razor,resw,resx,skin,usf,ush,vb,xaml,xamlx,xoml,xsd}]
 indent_style=space
-indent_size=4
-tab_width=4
+indent_size= 4
+tab_width= 4
+end_of_line = crlf
+dotnet_style_qualification_for_field = true:suggestion
+dotnet_style_qualification_for_property = true:suggestion
+dotnet_style_qualification_for_method = true:suggestion
+dotnet_style_qualification_for_event = true:suggestion
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggestion
+dotnet_style_operator_placement_when_wrapping = beginning_of_line

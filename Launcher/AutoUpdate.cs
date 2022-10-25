@@ -6,6 +6,8 @@
     using System.Diagnostics;
     using System.IO;
     using System.Net;
+    using System.Net.Http;
+    using System.Threading.Tasks;
 
     public static class AutoUpdate
     {
@@ -14,16 +16,12 @@
         private static string release_file_name = "release.zip";
         private static string self_exe_name = AppDomain.CurrentDomain.FriendlyName;
 
-        private static JObject get_latest_version_info()
+        private static async Task<JObject> get_latest_version_info()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(upgrade_url);
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Accept = "*/*";
-            httpWebRequest.Method = "GET";
-            httpWebRequest.UserAgent = "curl/7.83.0";
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            using var streamReader = new StreamReader(httpResponse.GetResponseStream());
-            var jsonObject = JsonConvert.DeserializeObject<JObject>(streamReader.ReadToEnd());
+            HttpClient httpClient = new HttpClient();
+            var response = await httpClient.GetStreamAsync(upgrade_url);
+            using var streamReader = new StreamReader(response);
+            var jsonObject = JsonConvert.DeserializeObject<JObject>(await streamReader.ReadToEndAsync());
             return jsonObject;
         }
 
@@ -51,7 +49,9 @@
             }
 
             var currentVersion = File.ReadAllText(versionFile).Trim();
-            var info = get_latest_version_info();
+            var infoTask = get_latest_version_info();
+            infoTask.Wait();
+            var info = infoTask.Result;
             string latestVersion;
             if (info["tag_name"] != null)
             {
@@ -73,8 +73,11 @@
             if (currentVersion != latestVersion)
             {
                 Console.WriteLine($"Your version is {currentVersion}. Latest version is {latestVersion}, downloading now...");
-                using var client = new WebClient();
-                client.DownloadFile(downloadUrl, release_file_name);
+                using var client = new HttpClient();
+                var downTask = client.GetStreamAsync(downloadUrl);
+                downTask.Wait();
+                var fileStream = new FileStream(release_file_name, FileMode.Create, FileAccess.Write);
+                downTask.Result.CopyTo(fileStream);
                 Process.Start("powershell.exe", $"Start-sleep -Seconds 3; Expand-Archive -Force {release_file_name} .; Remove-Item -Force {release_file_name}; ./{self_exe_name}.exe -Force");
                 return true;
 
