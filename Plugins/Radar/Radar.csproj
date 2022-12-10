@@ -28,6 +28,7 @@
       <Private>false</Private>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
     </ProjectReference>
+    <ProjectReference Include="..\..\Locales\Locales.csproj" />
   </ItemGroup>
 
   <ItemGroup>

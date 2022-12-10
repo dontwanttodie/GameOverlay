@@ -21,13 +21,14 @@ namespace Radar
     using Newtonsoft.Json;
     using SixLabors.ImageSharp;
     using SixLabors.ImageSharp.PixelFormats;
+    using Locales;
 
     /// <summary>
     /// <see cref="Radar"/> plugin.
     /// </summary>
     public sealed class Radar : PCore<RadarSettings>
     {
-        private readonly string heistUsefullChestContains = "HeistChestSecondary";
+        private readonly string heistUsefulChestContains = "HeistChestSecondary";
         private readonly string heistAllChestStarting = "Metadata/Chests/LeagueHeist";
         private readonly Dictionary<uint, string> heistChestCache = new();
         private readonly string delveChestStarting = "Metadata/Chests/DelveChests/";
@@ -64,21 +65,12 @@ namespace Radar
         /// <inheritdoc/>
         public override void DrawSettings()
         {
-            ImGui.TextWrapped("If your mini/large map icon are not working/visible. Open this " +
-                "setting window, click anywhere on it and then hide this setting window. It will fix the issue.");
-            ImGui.DragFloat("Large Map Fix", ref this.Settings.LargeMapScaleMultiplier, 0.001f, 0.01f, 0.3f);
-            ImGuiHelper.ToolTip("This slider is for fixing large map (icons) offset. " +
-                "You have to use it if you feel that LargeMap Icons " +
-                "are moving while your player is moving. You only have " +
-                "to find a value that works for you per game window resolution. " +
-                "Basically, you don't have to change it unless you change your " +
-                "game window resolution. Also, please contribute back, let me know " +
-                "what resolution you use and what value works best for you. " +
-                "This slider has no impact on mini-map icons. For windowed-full-screen " +
-                "default value should be good enough.");
-            ImGui.Checkbox("Hide Radar when in Hideout/Town", ref this.Settings.DrawWhenNotInHideoutOrTown);
-            ImGui.Checkbox("Hide Radar when game is in the background", ref this.Settings.DrawWhenForeground);
-            if (ImGui.Checkbox("Modify Large Map Culling Window", ref this.Settings.ModifyCullWindow))
+            ImGui.TextWrapped(Strings.RadarTopTips);
+            ImGui.DragFloat(Strings.LargeMapFix, ref this.Settings.LargeMapScaleMultiplier, 0.001f, 0.01f, 0.3f);
+            ImGuiHelper.ToolTip(Strings.LargeMapFixTips);
+            ImGui.Checkbox(Strings.HideRadarInHideoutOrTown, ref this.Settings.DrawWhenNotInHideoutOrTown);
+            ImGui.Checkbox(Strings.HideRadarInBackground, ref this.Settings.DrawWhenForeground);
+            if (ImGui.Checkbox(Strings.ModifyCullingWindow, ref this.Settings.ModifyCullWindow))
             {
                 if (this.Settings.ModifyCullWindow)
                 {
@@ -87,7 +79,7 @@ namespace Radar
             }
 
             ImGui.TreePush();
-            if (ImGui.Checkbox("Make Culling Window Cover Whole Game", ref this.Settings.MakeCullWindowFullScreen))
+            if (ImGui.Checkbox(Strings.MakeCullingWindowCoverWholeGame, ref this.Settings.MakeCullWindowFullScreen))
             {
                 this.Settings.ModifyCullWindow = !this.Settings.MakeCullWindowFullScreen;
                 this.Settings.CullWindowPos = Vector2.Zero;
@@ -95,17 +87,17 @@ namespace Radar
                 this.Settings.CullWindowSize.Y = Core.Process.WindowArea.Height;
             }
 
-            if (ImGui.TreeNode("Culling window advance options"))
+            if (ImGui.TreeNode(Strings.CullingWindowAdvanceOptions))
             {
-                ImGui.Checkbox("Draw maphack in culling window", ref this.Settings.DrawMapInCull);
-                ImGui.Checkbox("Draw POIs in culling window", ref this.Settings.DrawPOIInCull);
+                ImGui.Checkbox(Strings.DrawMaphackInCullingWindow, ref this.Settings.DrawMapInCull);
+                ImGui.Checkbox(Strings.DrawPOIsInCullingWindow, ref this.Settings.DrawPOIInCull);
                 ImGui.TreePop();
             }
 
             ImGui.TreePop();
             ImGui.Separator();
             ImGui.NewLine();
-            if (ImGui.Checkbox("Draw Area/Zone Map (maphack)", ref this.Settings.DrawWalkableMap))
+            if (ImGui.Checkbox(Strings.DrawMaphack, ref this.Settings.DrawWalkableMap))
             {
                 if (this.Settings.DrawWalkableMap)
                 {
@@ -120,7 +112,7 @@ namespace Radar
                 }
             }
 
-            if (ImGui.ColorEdit4("Drawn Map Color", ref this.Settings.WalkableMapColor))
+            if (ImGui.ColorEdit4(Strings.DrawnMapColor, ref this.Settings.WalkableMapColor))
             {
                 if (this.walkableMapTexture != IntPtr.Zero)
                 {
@@ -130,10 +122,10 @@ namespace Radar
 
             ImGui.Separator();
             ImGui.NewLine();
-            ImGui.Checkbox("Show points of interest (POI)", ref this.Settings.ShowImportantPOI);
-            ImGui.ColorEdit4("POI text color", ref this.Settings.POIColor);
-            ImGui.Checkbox("Add black background to POI text", ref this.Settings.EnablePOIBackground);
-            this.isAddNewPOIHeaderOpened = ImGui.CollapsingHeader("Add or Modify POI");
+            ImGui.Checkbox(Strings.ShowPOI, ref this.Settings.ShowImportantPOI);
+            ImGui.ColorEdit4(Strings.POITextColor, ref this.Settings.POIColor);
+            ImGui.Checkbox(Strings.AddBlackBackgroundToPOIText, ref this.Settings.EnablePOIBackground);
+            this.isAddNewPOIHeaderOpened = ImGui.CollapsingHeader(Strings.AddOrModifyPOI);
             if (this.isAddNewPOIHeaderOpened)
             {
                 this.AddNewPOIWidget();
@@ -142,48 +134,46 @@ namespace Radar
 
             ImGui.Separator();
             ImGui.NewLine();
-            ImGui.Checkbox("Hide Entities outside the network bubble", ref this.Settings.HideOutsideNetworkBubble);
-            ImGui.Checkbox("Show Player Names", ref this.Settings.ShowPlayersNames);
-            ImGui.InputText("Party Leader Name", ref this.leaderName, 200);
-            ImGuiHelper.ToolTip("This button will not work while Player is in the Scourge.");
-            if (ImGui.CollapsingHeader("Icons Setting"))
+            ImGui.Checkbox(Strings.HideEntitiesOutsideTheNetworkBubble, ref this.Settings.HideOutsideNetworkBubble);
+            ImGui.Checkbox(Strings.ShowPlayerNames, ref this.Settings.ShowPlayersNames);
+            ImGui.InputText(Strings.PartyLeaderName, ref this.leaderName, 200);
+            ImGuiHelper.ToolTip(Strings.PartyLeaderNameTips);
+            if (ImGui.CollapsingHeader(Strings.IconsSetting))
             {
                 this.Settings.DrawIconsSettingToImGui(
-                    "BaseGame Icons",
+                    Strings.BaseGameIcons,
                     this.Settings.BaseIcons,
-                    "Blockages icon can be set from Delve Icons category i.e. 'Blockage OR DelveWall'");
+                Strings.BaseGameIconsTips);
 
                 this.Settings.DrawIconsSettingToImGui(
-                    "Breach Icons",
+                    Strings.BreachIcons,
                     this.Settings.BreachIcons,
-                    "Breach bosses are same as BaseGame Icons -> Unique Monsters.");
+                    Strings.BreachIconsTips);
 
                 this.Settings.DrawIconsSettingToImGui(
-                    "Legion Icons",
+                    Strings.LegionIcons,
                     this.Settings.LegionIcons,
-                    "Selecting first icon from the icons image window will display important " +
-                    "legion monster names rather than the icon.");
+                    Strings.LegionIconsTips);
 
                 this.Settings.DrawIconsSettingToImGui(
-                    "Delirium Icons",
+                    Strings.DeliriumIcons,
                     this.Settings.DeliriumIcons,
-                    string.Empty);
+                    Strings.DeliriumIconsTips);
 
                 this.Settings.DrawIconsSettingToImGui(
-                    "Heist Icons",
+                    Strings.HeistIcons,
                     this.Settings.HeistIcons,
-                    string.Empty);
+                    Strings.HeistIconsTips);
 
                 this.Settings.DrawIconsSettingToImGui(
-                    "Expedition Icons",
+                    Strings.ExpeditionIcons,
                     this.Settings.ExpeditionIcons,
-                    string.Empty);
+                    Strings.ExpeditionIconsTips);
 
                 this.Settings.DrawIconsSettingToImGui(
-                    "Delve Icons",
+                    Strings.DelveIcons,
                     this.Settings.DelveIcons,
-                    "Selecting first icon from the icons image window will display " +
-                    "chest name rather than the icon.");
+                    Strings.DelveIconsTips);
             }
         }
 
@@ -197,12 +187,8 @@ namespace Radar
             {
                 ImGui.SetNextWindowPos(largeMap.Center, ImGuiCond.Appearing);
                 ImGui.SetNextWindowSize(new Vector2(400f), ImGuiCond.Appearing);
-                ImGui.Begin("Large Map Culling Window");
-                ImGui.TextWrapped("This is a culling window for the large map icons. " +
-                                  "Any large map icons outside of this window will be hidden automatically. " +
-                                  "Feel free to change the position/size of this window. " +
-                                  "Once you are happy with the dimensions, double click this window. " +
-                                  "You can bring this window back from the settings menu.");
+                ImGui.Begin(Strings.LargeMapCullingWindowTitle);
+                ImGui.TextWrapped(Strings.LargeMapCullingWindowTips);
                 this.Settings.CullWindowPos = ImGui.GetWindowPos();
                 this.Settings.CullWindowSize = ImGui.GetWindowSize();
                 if (ImGui.IsWindowHovered() && ImGui.IsMouseDoubleClicked(ImGuiMouseButton.Left))
@@ -239,7 +225,7 @@ namespace Radar
                 ImGui.SetNextWindowSize(this.Settings.CullWindowSize);
                 ImGui.SetNextWindowBgAlpha(0f);
                 ImGui.PushStyleVar(ImGuiStyleVar.WindowBorderSize, 0f);
-                ImGui.Begin("Large Map Culling Window", ImGuiHelper.TransparentWindowFlags);
+                ImGui.Begin(Strings.LargeMapCullingWindowTitle, ImGuiHelper.TransparentWindowFlags);
                 ImGui.PopStyleVar();
                 this.DrawLargeMap(largeMapRealCenter);
                 this.DrawTgtFiles(largeMapRealCenter);
@@ -502,8 +488,8 @@ namespace Radar
                         else
                         {
                             var playerIcon = playerComp.Name == this.leaderName
-                                ? this.Settings.BaseIcons["Leader"]
-                                : this.Settings.BaseIcons["Player"];
+                                ? this.Settings.BaseIcons[Strings.Leader]
+                                : this.Settings.BaseIcons[Strings.Player];
                             iconSizeMultiplierVector *= playerIcon.IconScale;
                             fgDraw.AddImage(
                                 playerIcon.TexturePtr,
@@ -518,7 +504,7 @@ namespace Radar
                         entity.Value.TryGetComponent<TriggerableBlockage>(out var blockComp);
                         if (blockComp.IsBlocked)
                         {
-                            var blockageIcon = this.Settings.DelveIcons["Blockage OR DelveWall"];
+                            var blockageIcon = this.Settings.DelveIcons[Strings.BlockageOrDelveWall];
                             iconSizeMultiplierVector *= blockageIcon.IconScale;
                             fgDraw.AddImage(
                                 blockageIcon.TexturePtr,
@@ -530,7 +516,7 @@ namespace Radar
 
                         break;
                     case EntityTypes.Chest:
-                        var chestIcon = this.Settings.BaseIcons["Chests Without Label"];
+                        var chestIcon = this.Settings.BaseIcons[Strings.ChestsWithoutLabel];
                         iconSizeMultiplierVector *= chestIcon.IconScale;
                         fgDraw.AddImage(
                             chestIcon.TexturePtr,
@@ -540,7 +526,7 @@ namespace Radar
                             chestIcon.UV1);
                         break;
                     case EntityTypes.ChestWithLabels:
-                        chestIcon = this.Settings.BaseIcons["Chests With Label"];
+                        chestIcon = this.Settings.BaseIcons[Strings.ChestsWithLabel];
                         iconSizeMultiplierVector *= chestIcon.IconScale;
                         fgDraw.AddImage(
                             chestIcon.TexturePtr,
@@ -550,7 +536,7 @@ namespace Radar
                             chestIcon.UV1);
                         break;
                     case EntityTypes.ExpeditionChest:
-                        chestIcon = this.Settings.ExpeditionIcons["Generic Expedition Chests"];
+                        chestIcon = this.Settings.ExpeditionIcons[Strings.GenericExpeditionChests];
                         iconSizeMultiplierVector *= chestIcon.IconScale;
                         fgDraw.AddImage(
                             chestIcon.TexturePtr,
@@ -614,7 +600,7 @@ namespace Radar
 
                         break;
                     case EntityTypes.ImportantStrongboxChest:
-                        chestIcon = this.Settings.BaseIcons["Important Strongboxes"];
+                        chestIcon = this.Settings.BaseIcons[Strings.ImportantStrongboxes];
                         iconSizeMultiplierVector *= chestIcon.IconScale;
                         fgDraw.AddImage(
                             chestIcon.TexturePtr,
@@ -624,7 +610,7 @@ namespace Radar
                             chestIcon.UV1);
                         break;
                     case EntityTypes.StrongboxChest:
-                        chestIcon = this.Settings.BaseIcons["Strongbox"];
+                        chestIcon = this.Settings.BaseIcons[Strings.Strongbox];
                         iconSizeMultiplierVector *= chestIcon.IconScale;
                         fgDraw.AddImage(
                             chestIcon.TexturePtr,
@@ -634,7 +620,7 @@ namespace Radar
                             chestIcon.UV1);
                         break;
                     case EntityTypes.BreachChest:
-                        chestIcon = this.Settings.BreachIcons["Breach Chest"];
+                        chestIcon = this.Settings.BreachIcons[Strings.BreachChest];
                         iconSizeMultiplierVector *= chestIcon.IconScale;
                         fgDraw.AddImage(
                             chestIcon.TexturePtr,
@@ -647,7 +633,7 @@ namespace Radar
                         entity.Value.TryGetComponent<Shrine>(out var shrineComp);
                         if (!shrineComp.IsUsed)
                         {
-                            var shrineIcon = this.Settings.BaseIcons["Shrine"];
+                            var shrineIcon = this.Settings.BaseIcons[Strings.Shrine];
                             iconSizeMultiplierVector *= shrineIcon.IconScale;
                             fgDraw.AddImage(
                                 shrineIcon.TexturePtr,
@@ -658,7 +644,7 @@ namespace Radar
                         }
                         break;
                     case EntityTypes.FriendlyMonster:
-                        var friendlyIcon = this.Settings.BaseIcons["Friendly"];
+                        var friendlyIcon = this.Settings.BaseIcons[Strings.Friendly];
                         iconSizeMultiplierVector *= friendlyIcon.IconScale;
                         fgDraw.AddImage(
                             friendlyIcon.TexturePtr,
@@ -690,11 +676,11 @@ namespace Radar
                     case EntityTypes.Stage1RewardFIT:
                     case EntityTypes.Stage0EChestFIT:
                     case EntityTypes.Stage1EChestFIT:
-                        var monsterChestIcon = this.Settings.LegionIcons["Legion Reward Monster/Chest"];
+                        var monsterChestIcon = this.Settings.LegionIcons[Strings.LegionRewardMonsterChest];
                         if (entity.Value.EntityType == EntityTypes.Stage0EChestFIT ||
                             entity.Value.EntityType == EntityTypes.Stage1EChestFIT)
                         {
-                            monsterChestIcon = this.Settings.LegionIcons["Legion Epic Chest"];
+                            monsterChestIcon = this.Settings.LegionIcons[Strings.LegionEpicChest];
                         }
 
                         if (monsterChestIcon.UV0 == Vector2.Zero)
@@ -719,7 +705,7 @@ namespace Radar
 
                         break;
                     case EntityTypes.DeliriumBomb:
-                        var dHiddenMIcon = this.Settings.DeliriumIcons["Delirium Bomb"];
+                        var dHiddenMIcon = this.Settings.DeliriumIcons[Strings.DeliriumBomb];
                         iconSizeMultiplierVector *= dHiddenMIcon.IconScale;
                         fgDraw.AddImage(
                             dHiddenMIcon.TexturePtr,
@@ -729,7 +715,7 @@ namespace Radar
                             dHiddenMIcon.UV1);
                         break;
                     case EntityTypes.DeliriumSpawner:
-                        dHiddenMIcon = this.Settings.DeliriumIcons["Delirium Spawner"];
+                        dHiddenMIcon = this.Settings.DeliriumIcons[Strings.DeliriumSpawner];
                         iconSizeMultiplierVector *= dHiddenMIcon.IconScale;
                         fgDraw.AddImage(
                             dHiddenMIcon.TexturePtr,
@@ -879,15 +865,17 @@ namespace Radar
         {
             return rarity switch
             {
-                Rarity.Normal or Rarity.Magic or Rarity.Rare or Rarity.Unique => this.Settings.BaseIcons[
-                    $"{rarity} Monster"],
-                _ => this.Settings.BaseIcons[$"Normal Monster"],
+                Rarity.Normal => this.Settings.BaseIcons[Strings.NormalMonster],
+                Rarity.Magic => this.Settings.BaseIcons[Strings.MagicMonster],
+                Rarity.Rare => this.Settings.BaseIcons[Strings.RareMonster],
+                Rarity.Unique => this.Settings.BaseIcons[Strings.UniqueMonster],
+                _ => this.Settings.BaseIcons[Strings.NormalMonster]
             };
         }
 
         private string HeistChestPathToIcon(string path)
         {
-            var strToReplace = string.Join('/', this.heistAllChestStarting, this.heistUsefullChestContains);
+            var strToReplace = string.Join('/', this.heistAllChestStarting, this.heistUsefulChestContains);
             var truncatedPath = path
                 .Replace(strToReplace, null, StringComparison.Ordinal)
                 .Replace("Military", null, StringComparison.Ordinal)
@@ -905,17 +893,17 @@ namespace Radar
         private void AddNewPOIWidget()
         {
             var tgttilesInArea = Core.States.InGameStateObject.CurrentAreaInstance.TgtTilesLocations;
-            ImGui.InputText("Area Name", ref this.currentAreaName, 200, ImGuiInputTextFlags.ReadOnly);
-            ImGui.InputInt("Filter on Max POI frenquency", ref this.Settings.POIFrequencyFilter);
-            if (ImGui.InputInt("Select POI via Index###tgtSelectorCounter", ref this.tmpTgtSelectionCounter) &&
+            ImGui.InputText(Strings.AreaName, ref this.currentAreaName, 200, ImGuiInputTextFlags.ReadOnly);
+            ImGui.InputInt(Strings.FilterPOIFrequency, ref this.Settings.POIFrequencyFilter);
+            if (ImGui.InputInt(Strings.SelectPOIViaIndex + "###tgtSelectorCounter", ref this.tmpTgtSelectionCounter) &&
                 this.tmpTgtSelectionCounter < tgttilesInArea.Keys.Count)
             {
                 this.tmpTileName = tgttilesInArea.Keys.ElementAt(this.tmpTgtSelectionCounter);
             }
 
-            ImGuiHelper.IEnumerableComboBox("POI Path", tgttilesInArea.Keys, ref this.tmpTileName);
-            ImGui.InputText("POI Display Name", ref this.tmpDisplayName, 200);
-            if (ImGui.Button("Add POI"))
+            ImGuiHelper.IEnumerableComboBox(Strings.POIPath, tgttilesInArea.Keys, ref this.tmpTileName);
+            ImGui.InputText(Strings.POIDisplayName, ref this.tmpDisplayName, 200);
+            if (ImGui.Button(Strings.AddPOI))
             {
                 if (!string.IsNullOrEmpty(this.currentAreaName) &&
                     !string.IsNullOrEmpty(this.tmpTileName) &&
@@ -937,20 +925,20 @@ namespace Radar
 
         private void ShowPOIWidget()
         {
-            if (ImGui.TreeNode($"Important POIs in Area: {this.currentAreaName}##import_time_in_area"))
+            if (ImGui.TreeNode($"{Strings.ImportantPOIsInArea}{this.currentAreaName}##import_time_in_area"))
             {
                 if (this.Settings.ImportantTgts.ContainsKey(this.currentAreaName))
                 {
                     foreach (var tgt in this.Settings.ImportantTgts[this.currentAreaName])
                     {
-                        if (ImGui.SmallButton($"Delete##{tgt.Key}"))
+                        if (ImGui.SmallButton($"{Strings.Delete}##{tgt.Key}"))
                         {
                             this.Settings.ImportantTgts[this.currentAreaName].Remove(tgt.Key);
                         }
 
                         ImGui.SameLine();
-                        ImGui.Text($"POI Path: {tgt.Key}, Display: {tgt.Value}");
-                        ImGuiHelper.ToolTip("Click me to Modify.");
+                        ImGui.Text($"{tgt.Value}: {tgt.Key}");
+                        ImGuiHelper.ToolTip(Strings.ClickMeToModify);
                         if (ImGui.IsItemClicked())
                         {
                             this.tmpTileName = tgt.Key;

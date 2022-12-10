@@ -135,7 +135,7 @@ namespace Radar
             {
                 ImGui.SetNextWindowPos(this.popUpPos, ImGuiCond.Appearing);
                 ImGui.SetNextWindowSize(new Vector2(400), ImGuiCond.Appearing);
-                var title = $"Icon Picker (Double click to select an item)";
+                var title = Locales.Strings.IconPickerTitle;
                 if (ImGui.Begin(title, ref this.showPopUp, PopUpFlags))
                 {
                     if (ImGui.IsWindowHovered() && ImGui.GetIO().MouseDoubleClicked[0])
@@ -173,7 +173,7 @@ namespace Radar
             }
             else
             {
-                string message = $"Missing Icons (sprite) file with name: {this.FilePathName}";
+                string message = Locales.Strings.MissingIconsFile + this.FilePathName;
                 throw new FileNotFoundException(message);
             }
         }

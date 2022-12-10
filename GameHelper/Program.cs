@@ -2,6 +2,8 @@
 // Copyright (c) None. All rights reserved.
 // </copyright>
 
+using Locales;
+
 namespace GameHelper
 {
     using System;
@@ -21,7 +23,7 @@ namespace GameHelper
         {
             AppDomain.CurrentDomain.UnhandledException += (sender, exceptionArgs) =>
             {
-                var errorText = "Program exited with message:\n " + exceptionArgs.ExceptionObject;
+                var errorText = Strings.ProgramExitedWithMessage + exceptionArgs.ExceptionObject;
                 File.AppendAllText("Error.log", $"{DateTime.Now:g} {errorText}\r\n{new string('-', 30)}\r\n");
                 Environment.Exit(1);
             };

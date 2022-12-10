@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using Locales;
+
 namespace Radar
 {
     using System.Collections.Generic;
@@ -206,42 +208,42 @@ namespace Radar
 
         private void AddDefaultBaseGameIcons(string iconPathName)
         {
-            this.BaseIcons.TryAdd("Player", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 2, 0, 20));
-            this.BaseIcons.TryAdd("Leader", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 3, 0, 20));
-            this.BaseIcons.TryAdd("Strongbox", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 8, 38, 30));
-            this.BaseIcons.TryAdd("Important Strongboxes", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 41, 35));
-            this.BaseIcons.TryAdd("Chests With Label", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 1, 13, 20));
-            this.BaseIcons.TryAdd("Chests Without Label", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 9, 20));
+            this.BaseIcons.TryAdd(Strings.Player, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 2, 0, 20));
+            this.BaseIcons.TryAdd(Strings.Leader, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 3, 0, 20));
+            this.BaseIcons.TryAdd(Strings.Strongbox, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 8, 38, 30));
+            this.BaseIcons.TryAdd(Strings.ImportantStrongboxes, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 41, 35));
+            this.BaseIcons.TryAdd(Strings.ChestsWithLabel, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 1, 13, 20));
+            this.BaseIcons.TryAdd(Strings.ChestsWithoutLabel, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 9, 20));
 
-            this.BaseIcons.TryAdd("Shrine", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 7, 0, 30));
+            this.BaseIcons.TryAdd(Strings.Shrine, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 7, 0, 30));
 
-            this.BaseIcons.TryAdd("Friendly", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 1, 0, 20));
-            this.BaseIcons.TryAdd("Normal Monster", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 0, 14, 20));
-            this.BaseIcons.TryAdd("Magic Monster", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 3, 20));
-            this.BaseIcons.TryAdd("Rare Monster", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 4, 20));
-            this.BaseIcons.TryAdd("Unique Monster", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 14, 30));
+            this.BaseIcons.TryAdd(Strings.Friendly, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 1, 0, 20));
+            this.BaseIcons.TryAdd(Strings.NormalMonster, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 0, 14, 20));
+            this.BaseIcons.TryAdd(Strings.MagicMonster, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 3, 20));
+            this.BaseIcons.TryAdd(Strings.RareMonster, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 4, 20));
+            this.BaseIcons.TryAdd(Strings.UniqueMonster, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 14, 30));
         }
 
         private void AddDefaultLegionIcons(string iconPathName)
         {
-            this.LegionIcons.TryAdd("Legion Reward Monster/Chest", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 4, 41, 30));
-            this.LegionIcons.TryAdd("Legion Epic Chest", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 41, 30));
+            this.LegionIcons.TryAdd(Strings.LegionRewardMonsterChest, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 4, 41, 30));
+            this.LegionIcons.TryAdd(Strings.LegionEpicChest, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 41, 30));
         }
 
         private void AddDefaultBreachIcons(string iconPathName)
         {
-            this.BreachIcons.TryAdd("Breach Chest", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 41, 30));
+            this.BreachIcons.TryAdd(Strings.BreachChest, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 41, 30));
         }
 
         private void AddDefaultDeliriumIcons(string iconPathName)
         {
-            this.DeliriumIcons.TryAdd("Delirium Bomb", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 0, 30));
-            this.DeliriumIcons.TryAdd("Delirium Spawner", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 0, 30));
+            this.DeliriumIcons.TryAdd(Strings.DeliriumBomb, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 0, 30));
+            this.DeliriumIcons.TryAdd(Strings.DeliriumSpawner, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 6, 0, 30));
         }
 
         private void AddDefaultExpeditionIcons(string iconPathName)
         {
-            this.ExpeditionIcons.TryAdd("Generic Expedition Chests", new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 41, 30));
+            this.ExpeditionIcons.TryAdd(Strings.GenericExpeditionChests, new IconPicker(iconPathName, IconsPngCols, IconsPngRows, 5, 41, 30));
         }
 
         private void AddDefaultHeistIcons(string iconPathName)

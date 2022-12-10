@@ -117,7 +117,211 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="IconPickerTitle" xml:space="preserve">
+    <value>Icon Picker (Double click to select an item)</value>
+  </data>
   <data name="MyName" xml:space="preserve">
     <value>hahaha</value>
+  </data>
+  <data name="MissingIconsFile" xml:space="preserve">
+      <value>Missing Icons (sprite) file with name: </value>
+  </data>
+  <data name="RadarTopTips" xml:space="preserve">
+      <value>If your mini/large map icon are not working/visible. Open this setting window, click anywhere on it and then hide this setting window. It will fix the issue.</value>
+  </data>
+  <data name="LargeMapFix" xml:space="preserve">
+      <value>Large Map Fix</value>
+  </data>
+  <data name="LargeMapFixTips" xml:space="preserve">
+      <value>This slider is for fixing large map (icons) offset. You have to use it if you feel that LargeMap Icons are moving while your player is moving. You only have to find a value that works for you per game window resolution. Basically, you don't have to change it unless you change your game window resolution. Also, please contribute back, let me know what resolution you use and what value works best for you. This slider has no impact on mini-map icons. For windowed-full-screen default value should be good enough.</value>
+  </data>
+  <data name="HideRadarInHideoutOrTown" xml:space="preserve">
+      <value>Hide Radar when in Hideout/Town</value>
+  </data>
+  <data name="HideRadarInBackground" xml:space="preserve">
+      <value>Hide Radar when game is in the background</value>
+  </data>
+  <data name="ModifyCullingWindow" xml:space="preserve">
+      <value>Modify Large Map Culling Window</value>
+  </data>
+  <data name="MakeCullingWindowCoverWholeGame" xml:space="preserve">
+      <value>Make Culling Window Cover Whole Game</value>
+  </data>
+  <data name="CullingWindowAdvanceOptions" xml:space="preserve">
+      <value>Culling window advance options</value>
+  </data>
+  <data name="DrawMaphackInCullingWindow" xml:space="preserve">
+      <value>Draw maphack in culling window</value>
+  </data>
+  <data name="DrawPOIsInCullingWindow" xml:space="preserve">
+      <value>Draw POIs in culling window</value>
+  </data>
+  <data name="DrawMaphack" xml:space="preserve">
+      <value>Draw Area/Zone Map (maphack)</value>
+  </data>
+  <data name="DrawnMapColor" xml:space="preserve">
+      <value>Drawn Map Color</value>
+  </data>
+  <data name="ShowPOI" xml:space="preserve">
+      <value>Show points of interest (POI)</value>
+  </data>
+  <data name="POITextColor" xml:space="preserve">
+      <value>POI text color</value>
+  </data>
+  <data name="AddBlackBackgroundToPOIText" xml:space="preserve">
+      <value>Add black background to POI text</value>
+  </data>
+  <data name="AddOrModifyPOI" xml:space="preserve">
+      <value>Add or Modify POI</value>
+  </data>
+  <data name="HideEntitiesOutsideTheNetworkBubble" xml:space="preserve">
+      <value>Hide Entities outside the network bubble</value>
+  </data>
+  <data name="ShowPlayerNames" xml:space="preserve">
+      <value>Show Player Names</value>
+  </data>
+  <data name="PartyLeaderName" xml:space="preserve">
+      <value>Party Leader Name</value>
+  </data>
+  <data name="PartyLeaderNameTips" xml:space="preserve">
+      <value>This button will not work while Player is in the Scourge.</value>
+  </data>
+  <data name="IconsSetting" xml:space="preserve">
+      <value>Icons Setting</value>
+  </data>
+  <data name="BaseGameIcons" xml:space="preserve">
+      <value>BaseGame Icons</value>
+  </data>
+  <data name="BaseGameIconsTips" xml:space="preserve">
+      <value>Blockages icon can be set from Delve Icons category i.e. 'Blockage OR DelveWall'</value>
+  </data>
+  <data name="BreachIcons" xml:space="preserve">
+      <value>Breach Icons</value>
+  </data>
+  <data name="BreachIconsTips" xml:space="preserve">
+      <value>Breach bosses are same as BaseGame Icons -&gt; Unique Monsters.</value>
+  </data>
+  <data name="LegionIcons" xml:space="preserve">
+      <value>Legion Icons</value>
+  </data>
+  <data name="LegionIconsTips" xml:space="preserve">
+      <value>Selecting first icon from the icons image window will display important legion monster names rather than the icon.</value>
+  </data>
+  <data name="DeliriumIcons" xml:space="preserve">
+      <value>Delirium Icons</value>
+  </data>
+  <data name="DeliriumIconsTips" xml:space="preserve">
+      <value>Delirium Icons</value>
+  </data>
+  <data name="HeistIcons" xml:space="preserve">
+      <value>Heist Icons</value>
+  </data>
+  <data name="HeistIconsTips" xml:space="preserve">
+      <value>Heist Icons</value>
+  </data>
+  <data name="ExpeditionIcons" xml:space="preserve">
+      <value>Expedition Icons</value>
+  </data>
+  <data name="ExpeditionIconsTips" xml:space="preserve">
+      <value>Expedition Icons</value>
+  </data>
+  <data name="DelveIcons" xml:space="preserve">
+      <value>Delve Icons</value>
+  </data>
+  <data name="DelveIconsTips" xml:space="preserve">
+      <value>Selecting first icon from the icons image window will display chest name rather than the icon.</value>
+  </data>
+  <data name="LargeMapCullingWindowTitle" xml:space="preserve">
+      <value>Large Map Culling Window</value>
+  </data>
+  <data name="LargeMapCullingWindowTips" xml:space="preserve">
+      <value>This is a culling window for the large map icons. Any large map icons outside of this window will be hidden automatically. Feel free to change the position/size of this window. Once you are happy with the dimensions, double click this window. You can bring this window back from the settings menu.</value>
+  </data>
+  <data name="Leader" xml:space="preserve">
+      <value>Leader</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+      <value>Player</value>
+  </data>
+  <data name="BlockageOrDelveWall" xml:space="preserve">
+      <value>Blockage OR DelveWall</value>
+  </data>
+  <data name="ChestsWithoutLabel" xml:space="preserve">
+      <value>Chests Without Label</value>
+  </data>
+  <data name="ChestsWithLabel" xml:space="preserve">
+      <value>Chests With Label</value>
+  </data>
+  <data name="GenericExpeditionChests" xml:space="preserve">
+      <value>Generic Expedition Chests</value>
+  </data>
+  <data name="ImportantStrongboxes" xml:space="preserve">
+      <value>Important Strongboxes</value>
+  </data>
+  <data name="Strongbox" xml:space="preserve">
+      <value>Strongbox</value>
+  </data>
+  <data name="BreachChest" xml:space="preserve">
+      <value>Breach Chest</value>
+  </data>
+  <data name="Shrine" xml:space="preserve">
+      <value>Shrine</value>
+  </data>
+  <data name="Friendly" xml:space="preserve">
+      <value>Friendly</value>
+  </data>
+  <data name="LegionRewardMonsterChest" xml:space="preserve">
+      <value>Legion Reward Monster/Chest</value>
+  </data>
+  <data name="LegionEpicChest" xml:space="preserve">
+      <value>Legion Epic Chest</value>
+  </data>
+  <data name="DeliriumBomb" xml:space="preserve">
+      <value>Delirium Bomb</value>
+  </data>
+  <data name="DeliriumSpawner" xml:space="preserve">
+      <value>Delirium Spawner</value>
+  </data>
+  <data name="NormalMonster" xml:space="preserve">
+      <value>Normal Monster</value>
+  </data>
+  <data name="MagicMonster" xml:space="preserve">
+      <value>Magic Monster</value>
+  </data>
+  <data name="RareMonster" xml:space="preserve">
+      <value>Rare Monster</value>
+  </data>
+  <data name="UniqueMonster" xml:space="preserve">
+      <value>Unique Monster</value>
+  </data>
+  <data name="AreaName" xml:space="preserve">
+      <value>Area Name</value>
+  </data>
+  <data name="FilterPOIFrequency" xml:space="preserve">
+      <value>Filter on Max POI frequency</value>
+  </data>
+  <data name="SelectPOIViaIndex" xml:space="preserve">
+      <value>Select POI via Index</value>
+  </data>
+  <data name="POIPath" xml:space="preserve">
+      <value>POI Path</value>
+  </data>
+  <data name="POIDisplayName" xml:space="preserve">
+      <value>POI Display Name</value>
+  </data>
+  <data name="AddPOI" xml:space="preserve">
+      <value>Add POI</value>
+  </data>
+  <data name="ImportantPOIsInArea" xml:space="preserve">
+      <value>Important POIs in Area: </value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+      <value>Delete</value>
+  </data>
+  <data name="ClickMeToModify" xml:space="preserve">
+      <value>Click me to Modify.</value>
+  </data>
+  <data name="ProgramExitedWithMessage" xml:space="preserve">
+      <value>Program exited with message:\n </value>
   </data>
 </root>

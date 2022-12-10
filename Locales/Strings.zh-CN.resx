@@ -120,4 +120,208 @@
   <data name="MyName" xml:space="preserve">
     <value>哈哈哈</value>
   </data>
+  <data name="RadarTopTips" xml:space="preserve">
+      <value>如果您的小/大地图图标无法正常工作/可见。 打开此设置窗口，单击其上的任何位置，然后隐藏此设置窗口。 它将解决这个问题。</value>
+  </data>
+  <data name="IconPickerTitle" xml:space="preserve">
+      <value>图标选择器（双击以选择一个项目）</value>
+  </data>
+  <data name="MissingIconsFile" xml:space="preserve">
+      <value>图标文件缺失：</value>
+  </data>
+  <data name="LargeMapFix" xml:space="preserve">
+      <value>大地图修正</value>
+  </data>
+  <data name="LargeMapFixTips" xml:space="preserve">
+      <value>此滑块用于修正大地图（图标）偏移。 如果您觉得大地图图标会随着您的角色的移动而移动时，则必须使用它。 您只需要找到一个适合您每个游戏窗口分辨率的值即可。 基本上，除非您更改游戏窗口分辨率，否则您不必更改它。 另外，请提供反馈，让我知道您使用的是什么分辨率以及最适合您的值。 该滑块对小地图图标没有影响。 对于窗口化全屏，默认值应该正好。</value>
+  </data>
+  <data name="HideRadarInHideoutOrTown" xml:space="preserve">
+      <value>在藏身处/城镇中隐藏雷达</value>
+  </data>
+  <data name="HideRadarInBackground" xml:space="preserve">
+      <value>游戏在后台时隐藏雷达</value>
+  </data>
+  <data name="ModifyCullingWindow" xml:space="preserve">
+      <value>修改大地图遮罩窗口</value>
+  </data>
+  <data name="MakeCullingWindowCoverWholeGame" xml:space="preserve">
+      <value>让遮罩窗口覆盖整个游戏</value>
+  </data>
+  <data name="CullingWindowAdvanceOptions" xml:space="preserve">
+      <value>遮罩窗口高级选项</value>
+  </data>
+  <data name="DrawMaphackInCullingWindow" xml:space="preserve">
+      <value>在遮罩窗口中绘制地图黑客</value>
+  </data>
+  <data name="DrawPOIsInCullingWindow" xml:space="preserve">
+      <value>在遮罩窗口中绘制兴趣点</value>
+  </data>
+  <data name="DrawMaphack" xml:space="preserve">
+      <value>绘制区域地图（地图黑客）</value>
+  </data>
+  <data name="DrawnMapColor" xml:space="preserve">
+      <value>绘制地图的颜色</value>
+  </data>
+  <data name="ShowPOI" xml:space="preserve">
+      <value>显示兴趣点（地图标记）</value>
+  </data>
+  <data name="POITextColor" xml:space="preserve">
+      <value>兴趣点文字颜色</value>
+  </data>
+  <data name="AddBlackBackgroundToPOIText" xml:space="preserve">
+      <value>为兴趣点文本添加黑色背景</value>
+  </data>
+  <data name="AddOrModifyPOI" xml:space="preserve">
+      <value>添加或修改兴趣点</value>
+  </data>
+  <data name="HideEntitiesOutsideTheNetworkBubble" xml:space="preserve">
+      <value>隐藏网络气泡外的实体</value>
+  </data>
+  <data name="ShowPlayerNames" xml:space="preserve">
+      <value>显示玩家名称</value>
+  </data>
+  <data name="PartyLeaderName" xml:space="preserve">
+      <value>队长名称</value>
+  </data>
+  <data name="PartyLeaderNameTips" xml:space="preserve">
+      <value>当玩家在天灾中时，此按钮将不起作用。</value>
+  </data>
+  <data name="IconsSetting" xml:space="preserve">
+      <value>图标设置</value>
+  </data>
+  <data name="BaseGameIcons" xml:space="preserve">
+      <value>基础游戏图标</value>
+  </data>
+  <data name="BaseGameIconsTips" xml:space="preserve">
+      <value>屏障图标可以在地图探险图标分类中进行设置，比如，“屏障或矿坑墙”</value>
+  </data>
+  <data name="BreachIcons" xml:space="preserve">
+      <value>深渊图标</value>
+  </data>
+  <data name="BreachIconsTips" xml:space="preserve">
+      <value>深渊首领与基础游戏图标中的传奇怪物相同。</value>
+  </data>
+  <data name="LegionIcons" xml:space="preserve">
+      <value>军团图标</value>
+  </data>
+  <data name="LegionIconsTips" xml:space="preserve">
+      <value>从图标图像窗口中选择第一个图标将显示重要的军团怪物名称而不是图标。</value>
+  </data>
+  <data name="DeliriumIcons" xml:space="preserve">
+      <value>迷雾图标</value>
+  </data>
+  <data name="HeistIcons" xml:space="preserve">
+      <value>夺宝图标</value>
+  </data>
+  <data name="DeliriumIconsTips" xml:space="preserve">
+      <value>迷雾图标</value>
+  </data>
+  <data name="HeistIconsTips" xml:space="preserve">
+      <value>夺宝图标</value>
+  </data>
+  <data name="ExpeditionIcons" xml:space="preserve">
+      <value>先祖秘藏图标（炸坟）</value>
+  </data>
+  <data name="ExpeditionIconsTips" xml:space="preserve">
+      <value>先祖秘藏图标（炸坟）</value>
+  </data>
+  <data name="DelveIcons" xml:space="preserve">
+      <value>地心探险图标（挖矿）</value>
+  </data>
+  <data name="DelveIconsTips" xml:space="preserve">
+      <value>从图标图像窗口中选择第一个图标将显示箱子名称而不是图标。</value>
+  </data>
+  <data name="LargeMapCullingWindowTitle" xml:space="preserve">
+      <value>大地图遮罩窗口</value>
+  </data>
+  <data name="LargeMapCullingWindowTips" xml:space="preserve">
+      <value>这是大地图图标的遮罩窗口。 此窗口之外的任何大地图图标都将自动隐藏。 随意更改此窗口的尺寸/位置， 一旦您对尺寸/位置感到满意，请双击此窗口即可保存。 您可以从设置菜单中恢复此窗口。</value>
+  </data>
+  <data name="Leader" xml:space="preserve">
+      <value>队长</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+      <value>玩家</value>
+  </data>
+  <data name="BlockageOrDelveWall" xml:space="preserve">
+      <value>屏障或矿坑墙</value>
+  </data>
+  <data name="ChestsWithoutLabel" xml:space="preserve">
+      <value>没有标签的箱子</value>
+  </data>
+  <data name="ChestsWithLabel" xml:space="preserve">
+      <value>有标签的箱子</value>
+  </data>
+  <data name="GenericExpeditionChests" xml:space="preserve">
+      <value>通用先祖秘藏宝箱</value>
+  </data>
+  <data name="ImportantStrongboxes" xml:space="preserve">
+      <value>重要的保险箱</value>
+  </data>
+  <data name="Strongbox" xml:space="preserve">
+      <value>保险箱</value>
+  </data>
+  <data name="BreachChest" xml:space="preserve">
+      <value>深渊箱子</value>
+  </data>
+  <data name="Shrine" xml:space="preserve">
+      <value>神殿</value>
+  </data>
+  <data name="Friendly" xml:space="preserve">
+      <value>友好的</value>
+  </data>
+  <data name="LegionRewardMonsterChest" xml:space="preserve">
+      <value>军团奖励怪物/宝箱</value>
+  </data>
+  <data name="LegionEpicChest" xml:space="preserve">
+      <value>军团史诗宝箱</value>
+  </data>
+  <data name="DeliriumBomb" xml:space="preserve">
+      <value>迷雾爆炸物</value>
+  </data>
+  <data name="DeliriumSpawner" xml:space="preserve">
+      <value>迷雾产怪卵</value>
+  </data>
+  <data name="NormalMonster" xml:space="preserve">
+      <value>普通怪物</value>
+  </data>
+  <data name="MagicMonster" xml:space="preserve">
+      <value>魔法怪物</value>
+  </data>
+  <data name="RareMonster" xml:space="preserve">
+      <value>稀有怪物</value>
+  </data>
+  <data name="UniqueMonster" xml:space="preserve">
+      <value>传奇怪物</value>
+  </data>
+  <data name="AreaName" xml:space="preserve">
+      <value>区域名称</value>
+  </data>
+  <data name="FilterPOIFrequency" xml:space="preserve">
+      <value>过滤兴趣点的最大出现频次</value>
+  </data>
+  <data name="SelectPOIViaIndex" xml:space="preserve">
+      <value>通过索引选择兴趣点</value>
+  </data>
+  <data name="POIPath" xml:space="preserve">
+      <value>兴趣点路径</value>
+  </data>
+  <data name="POIDisplayName" xml:space="preserve">
+      <value>兴趣点显示名称</value>
+  </data>
+  <data name="AddPOI" xml:space="preserve">
+      <value>添加兴趣点</value>
+  </data>
+  <data name="ImportantPOIsInArea" xml:space="preserve">
+      <value>区域内的重要兴趣点：</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+      <value>删除</value>
+  </data>
+  <data name="ClickMeToModify" xml:space="preserve">
+      <value>点击进行修改</value>
+  </data>
+  <data name="ProgramExitedWithMessage" xml:space="preserve">
+      <value>程序逃跑了，并对你留了一句话：\n </value>
+  </data>
 </root>

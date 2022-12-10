@@ -61,11 +61,623 @@ namespace Locales {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add black background to POI text.
+        /// </summary>
+        public static string AddBlackBackgroundToPOIText {
+            get {
+                return ResourceManager.GetString("AddBlackBackgroundToPOIText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add or Modify POI.
+        /// </summary>
+        public static string AddOrModifyPOI {
+            get {
+                return ResourceManager.GetString("AddOrModifyPOI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add POI.
+        /// </summary>
+        public static string AddPOI {
+            get {
+                return ResourceManager.GetString("AddPOI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Area Name.
+        /// </summary>
+        public static string AreaName {
+            get {
+                return ResourceManager.GetString("AreaName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BaseGame Icons.
+        /// </summary>
+        public static string BaseGameIcons {
+            get {
+                return ResourceManager.GetString("BaseGameIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blockages icon can be set from Delve Icons category i.e. &apos;Blockage OR DelveWall&apos;.
+        /// </summary>
+        public static string BaseGameIconsTips {
+            get {
+                return ResourceManager.GetString("BaseGameIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blockage OR DelveWall.
+        /// </summary>
+        public static string BlockageOrDelveWall {
+            get {
+                return ResourceManager.GetString("BlockageOrDelveWall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breach Chest.
+        /// </summary>
+        public static string BreachChest {
+            get {
+                return ResourceManager.GetString("BreachChest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breach Icons.
+        /// </summary>
+        public static string BreachIcons {
+            get {
+                return ResourceManager.GetString("BreachIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breach bosses are same as BaseGame Icons -&gt; Unique Monsters..
+        /// </summary>
+        public static string BreachIconsTips {
+            get {
+                return ResourceManager.GetString("BreachIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chests With Label.
+        /// </summary>
+        public static string ChestsWithLabel {
+            get {
+                return ResourceManager.GetString("ChestsWithLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chests Without Label.
+        /// </summary>
+        public static string ChestsWithoutLabel {
+            get {
+                return ResourceManager.GetString("ChestsWithoutLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click me to Modify..
+        /// </summary>
+        public static string ClickMeToModify {
+            get {
+                return ResourceManager.GetString("ClickMeToModify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Culling window advance options.
+        /// </summary>
+        public static string CullingWindowAdvanceOptions {
+            get {
+                return ResourceManager.GetString("CullingWindowAdvanceOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delirium Bomb.
+        /// </summary>
+        public static string DeliriumBomb {
+            get {
+                return ResourceManager.GetString("DeliriumBomb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delirium Icons.
+        /// </summary>
+        public static string DeliriumIcons {
+            get {
+                return ResourceManager.GetString("DeliriumIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delirium Icons.
+        /// </summary>
+        public static string DeliriumIconsTips {
+            get {
+                return ResourceManager.GetString("DeliriumIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delirium Spawner.
+        /// </summary>
+        public static string DeliriumSpawner {
+            get {
+                return ResourceManager.GetString("DeliriumSpawner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delve Icons.
+        /// </summary>
+        public static string DelveIcons {
+            get {
+                return ResourceManager.GetString("DelveIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selecting first icon from the icons image window will display chest name rather than the icon..
+        /// </summary>
+        public static string DelveIconsTips {
+            get {
+                return ResourceManager.GetString("DelveIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw Area/Zone Map (maphack).
+        /// </summary>
+        public static string DrawMaphack {
+            get {
+                return ResourceManager.GetString("DrawMaphack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw maphack in culling window.
+        /// </summary>
+        public static string DrawMaphackInCullingWindow {
+            get {
+                return ResourceManager.GetString("DrawMaphackInCullingWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drawn Map Color.
+        /// </summary>
+        public static string DrawnMapColor {
+            get {
+                return ResourceManager.GetString("DrawnMapColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw POIs in culling window.
+        /// </summary>
+        public static string DrawPOIsInCullingWindow {
+            get {
+                return ResourceManager.GetString("DrawPOIsInCullingWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expedition Icons.
+        /// </summary>
+        public static string ExpeditionIcons {
+            get {
+                return ResourceManager.GetString("ExpeditionIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expedition Icons.
+        /// </summary>
+        public static string ExpeditionIconsTips {
+            get {
+                return ResourceManager.GetString("ExpeditionIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter on Max POI frequency.
+        /// </summary>
+        public static string FilterPOIFrequency {
+            get {
+                return ResourceManager.GetString("FilterPOIFrequency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friendly.
+        /// </summary>
+        public static string Friendly {
+            get {
+                return ResourceManager.GetString("Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generic Expedition Chests.
+        /// </summary>
+        public static string GenericExpeditionChests {
+            get {
+                return ResourceManager.GetString("GenericExpeditionChests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heist Icons.
+        /// </summary>
+        public static string HeistIcons {
+            get {
+                return ResourceManager.GetString("HeistIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heist Icons.
+        /// </summary>
+        public static string HeistIconsTips {
+            get {
+                return ResourceManager.GetString("HeistIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide Entities outside the network bubble.
+        /// </summary>
+        public static string HideEntitiesOutsideTheNetworkBubble {
+            get {
+                return ResourceManager.GetString("HideEntitiesOutsideTheNetworkBubble", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide Radar when game is in the background.
+        /// </summary>
+        public static string HideRadarInBackground {
+            get {
+                return ResourceManager.GetString("HideRadarInBackground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide Radar when in Hideout/Town.
+        /// </summary>
+        public static string HideRadarInHideoutOrTown {
+            get {
+                return ResourceManager.GetString("HideRadarInHideoutOrTown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Icon Picker (Double click to select an item).
+        /// </summary>
+        public static string IconPickerTitle {
+            get {
+                return ResourceManager.GetString("IconPickerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Icons Setting.
+        /// </summary>
+        public static string IconsSetting {
+            get {
+                return ResourceManager.GetString("IconsSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Important POIs in Area: .
+        /// </summary>
+        public static string ImportantPOIsInArea {
+            get {
+                return ResourceManager.GetString("ImportantPOIsInArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Important Strongboxes.
+        /// </summary>
+        public static string ImportantStrongboxes {
+            get {
+                return ResourceManager.GetString("ImportantStrongboxes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is a culling window for the large map icons. Any large map icons outside of this window will be hidden automatically. Feel free to change the position/size of this window. Once you are happy with the dimensions, double click this window. You can bring this window back from the settings menu..
+        /// </summary>
+        public static string LargeMapCullingWindowTips {
+            get {
+                return ResourceManager.GetString("LargeMapCullingWindowTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Large Map Culling Window.
+        /// </summary>
+        public static string LargeMapCullingWindowTitle {
+            get {
+                return ResourceManager.GetString("LargeMapCullingWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Large Map Fix.
+        /// </summary>
+        public static string LargeMapFix {
+            get {
+                return ResourceManager.GetString("LargeMapFix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This slider is for fixing large map (icons) offset. You have to use it if you feel that LargeMap Icons are moving while your player is moving. You only have to find a value that works for you per game window resolution. Basically, you don&apos;t have to change it unless you change your game window resolution. Also, please contribute back, let me know what resolution you use and what value works best for you. This slider has no impact on mini-map icons. For windowed-full-screen default value should be good enough [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string LargeMapFixTips {
+            get {
+                return ResourceManager.GetString("LargeMapFixTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leader.
+        /// </summary>
+        public static string Leader {
+            get {
+                return ResourceManager.GetString("Leader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legion Epic Chest.
+        /// </summary>
+        public static string LegionEpicChest {
+            get {
+                return ResourceManager.GetString("LegionEpicChest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legion Icons.
+        /// </summary>
+        public static string LegionIcons {
+            get {
+                return ResourceManager.GetString("LegionIcons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selecting first icon from the icons image window will display important legion monster names rather than the icon..
+        /// </summary>
+        public static string LegionIconsTips {
+            get {
+                return ResourceManager.GetString("LegionIconsTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legion Reward Monster/Chest.
+        /// </summary>
+        public static string LegionRewardMonsterChest {
+            get {
+                return ResourceManager.GetString("LegionRewardMonsterChest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Magic Monster.
+        /// </summary>
+        public static string MagicMonster {
+            get {
+                return ResourceManager.GetString("MagicMonster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make Culling Window Cover Whole Game.
+        /// </summary>
+        public static string MakeCullingWindowCoverWholeGame {
+            get {
+                return ResourceManager.GetString("MakeCullingWindowCoverWholeGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Missing Icons (sprite) file with name: .
+        /// </summary>
+        public static string MissingIconsFile {
+            get {
+                return ResourceManager.GetString("MissingIconsFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modify Large Map Culling Window.
+        /// </summary>
+        public static string ModifyCullingWindow {
+            get {
+                return ResourceManager.GetString("ModifyCullingWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hahaha.
         /// </summary>
         public static string MyName {
             get {
                 return ResourceManager.GetString("MyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Normal Monster.
+        /// </summary>
+        public static string NormalMonster {
+            get {
+                return ResourceManager.GetString("NormalMonster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Party Leader Name.
+        /// </summary>
+        public static string PartyLeaderName {
+            get {
+                return ResourceManager.GetString("PartyLeaderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This button will not work while Player is in the Scourge..
+        /// </summary>
+        public static string PartyLeaderNameTips {
+            get {
+                return ResourceManager.GetString("PartyLeaderNameTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player.
+        /// </summary>
+        public static string Player {
+            get {
+                return ResourceManager.GetString("Player", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to POI Display Name.
+        /// </summary>
+        public static string POIDisplayName {
+            get {
+                return ResourceManager.GetString("POIDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to POI Path.
+        /// </summary>
+        public static string POIPath {
+            get {
+                return ResourceManager.GetString("POIPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to POI text color.
+        /// </summary>
+        public static string POITextColor {
+            get {
+                return ResourceManager.GetString("POITextColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Program exited with message:\n .
+        /// </summary>
+        public static string ProgramExitedWithMessage {
+            get {
+                return ResourceManager.GetString("ProgramExitedWithMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If your mini/large map icon are not working/visible. Open this setting window, click anywhere on it and then hide this setting window. It will fix the issue..
+        /// </summary>
+        public static string RadarTopTips {
+            get {
+                return ResourceManager.GetString("RadarTopTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rare Monster.
+        /// </summary>
+        public static string RareMonster {
+            get {
+                return ResourceManager.GetString("RareMonster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select POI via Index.
+        /// </summary>
+        public static string SelectPOIViaIndex {
+            get {
+                return ResourceManager.GetString("SelectPOIViaIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Player Names.
+        /// </summary>
+        public static string ShowPlayerNames {
+            get {
+                return ResourceManager.GetString("ShowPlayerNames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show points of interest (POI).
+        /// </summary>
+        public static string ShowPOI {
+            get {
+                return ResourceManager.GetString("ShowPOI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shrine.
+        /// </summary>
+        public static string Shrine {
+            get {
+                return ResourceManager.GetString("Shrine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strongbox.
+        /// </summary>
+        public static string Strongbox {
+            get {
+                return ResourceManager.GetString("Strongbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unique Monster.
+        /// </summary>
+        public static string UniqueMonster {
+            get {
+                return ResourceManager.GetString("UniqueMonster", resourceCulture);
             }
         }
     }
