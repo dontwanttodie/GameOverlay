@@ -99,13 +99,13 @@ csharp_style_prefer_method_group_conversion = true:silent
 csharp_style_prefer_top_level_statements = true:silent
 csharp_space_around_binary_operators = before_and_after
 csharp_indent_labels = one_less_than_current
-insert_final_newline = true
 
 [*.{cs,vb}]
 dotnet_style_object_initializer=false:suggestion
 dotnet_style_collection_initializer=true:suggestion
 
 [*.{appxmanifest,asax,ascx,aspx,axaml,build,cg,cginc,compute,cs,cshtml,dtd,hlsl,hlsli,hlslinc,master,nuspec,paml,razor,resw,resx,skin,usf,ush,vb,xaml,xamlx,xoml,xsd}]
+charset=utf-8-bom
 indent_style=space
 indent_size= 4
 tab_width= 4

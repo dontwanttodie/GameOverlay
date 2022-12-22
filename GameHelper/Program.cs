@@ -2,14 +2,13 @@
 // Copyright (c) None. All rights reserved.
 // </copyright>
 
-using Locales;
-
 namespace GameHelper
 {
     using System;
     using System.IO;
     using System.Threading.Tasks;
     using Utils;
+    using Locales;
 
     /// <summary>
     ///     Class executed when the application starts.

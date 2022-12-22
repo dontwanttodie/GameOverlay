@@ -7,29 +7,24 @@
     public struct LifeOffset
     {
         [FieldOffset(0x000)] public ComponentHeader Header;
-        [FieldOffset(0x190)] public VitalStruct Mana;
-        [FieldOffset(0x1C8)] public VitalStruct EnergyShield;
-        [FieldOffset(0x228)] public VitalStruct Health;
+        [FieldOffset(0x170)] public VitalStruct Health;
+        [FieldOffset(0x1C0)] public VitalStruct Mana;
+        [FieldOffset(0x1F8)] public VitalStruct EnergyShield;
     }
 
-    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    [StructLayout(LayoutKind.Explicit, Pack = 1)]
     public struct VitalStruct
     {
+        [FieldOffset(0x00)]
+        public IntPtr VirtualTable;
+
+        [FieldOffset(0x08)]
         public IntPtr PtrToLifeComponent;
-
-        /// <summary>
-        ///     This is greater than zero if Vital is regenerating
-        ///     For value = 0 or less than 0, Vital isn't regenerating
-        /// </summary>
-        public float Regeneration;
-
-        public int Total;
-
-        public int Current;
 
         /// <summary>
         ///     e.g. Clarity reserve flat Vital
         /// </summary>
+        [FieldOffset(0x10)]
         public int ReservedFlat;
 
         /// <summary>
@@ -37,7 +32,21 @@
         ///     ReservedFlat does not change this value.
         ///     Note that it's an integer, this is due to 20.23% is stored as 2023
         /// </summary>
+        [FieldOffset(0x14)]
         public int ReservedPercent;
+
+        /// <summary>
+        ///     This is greater than zero if Vital is regenerating
+        ///     For value = 0 or less than 0, Vital isn't regenerating
+        /// </summary>
+        [FieldOffset(0x28)]
+        public float Regeneration;
+        
+        [FieldOffset(0x2C)]
+        public int Total;
+        
+        [FieldOffset(0x30)]
+        public int Current;
 
         /// <summary>
         ///     Final Reserved amount of Vital after all the calculations.
