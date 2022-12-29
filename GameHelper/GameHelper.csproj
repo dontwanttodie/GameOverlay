@@ -8,6 +8,10 @@
     <Description>An overlay to help play the game.</Description>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+ 
+  <PropertyGroup>
+      <NoWarn>NU1605</NoWarn>
+  </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputType>Exe</OutputType>
